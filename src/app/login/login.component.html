@@ -1,0 +1,24 @@
+<div class="login-box">
+  <img src="../../assets/realicon.jpg" class="avatar">
+  <form [formGroup]="loginForm" class="login-container" (ngSubmit)="login()">
+
+    <p [ngClass]="{ 'has-error': isSubmitted && formControls.email.errors }">
+      <input type="username" name="username" placeholder="Email or Mobile" formControlName="email" >
+    </p>
+
+    <div *ngIf="isSubmitted && formControls.email.errors" class="help-block">
+      <div *ngIf="formControls.email.errors.required">Email or Mobile is required</div>
+    </div><br>
+
+    <p [ngClass]="{ 'has-error': isSubmitted && formControls.pass.errors }">
+      <input type="password" name="password" placeholder="Password" formControlName="pass">
+    </p>
+
+    <div *ngIf="isSubmitted && formControls.pass.errors" class="help-block">
+      <div *ngIf="formControls.pass.errors.required">Password is required</div>
+    </div>
+
+    <input type="submit" name="submit" value="Login">
+    <a [routerLink]="['/forgetpassword']" class="btn btn-link">Forgotten Password?</a>
+  </form>
+</div>

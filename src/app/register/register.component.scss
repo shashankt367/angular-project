@@ -1,0 +1,13 @@
+.btn-group-lg>.btn, .btn-lg{
+    font-size: 10px;
+    font-weight: bold;
+    border:1px solid !important;
+}
+.avatar{
+    width: 120px;
+    height: 120px;
+    //border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: calc(50% - 50px);
+}
